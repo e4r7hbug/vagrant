@@ -2,10 +2,6 @@
 - hosts: all
   gather_facts: no
   sudo: yes
-  vars:
-    user:
-      name: ntangsurat
-      uid: 3461
   tasks:
     - name: Install essentials
       apt: update_cache=yes cache_valid_time=3600 name={{ item }}
